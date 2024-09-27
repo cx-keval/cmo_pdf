@@ -1,5 +1,6 @@
-import PageThree from "./components/PageThree";
 import PageTwo from "./components/PageTwo";
+import PageThree from "./components/PageThree";
+import PageFour from "./components/PageFour";
 import PageWrapper from "./components/PageWrapper";
 
 const App = () => {
@@ -9,6 +10,10 @@ const App = () => {
 
             <PageWrapper>
                 <PageThree />
+            </PageWrapper>
+
+            <PageWrapper>
+                <PageFour />
             </PageWrapper>
         </div>
     );
