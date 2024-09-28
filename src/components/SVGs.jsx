@@ -86,3 +86,29 @@ export const InfluenzerLighteningSVG = ({ className = "" }) => (
         </defs>
     </svg>
 );
+
+export const InfoCircleSVG = ({ className = "" }) => (
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        fill="none"
+        viewBox="0 0 16 16"
+        className={className}
+    >
+        <g
+            stroke="#475569"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="1.5"
+            clipPath="url(#clip0_15620_4632)"
+        >
+            <path d="M2 8a6 6 0 1012 0A6 6 0 002 8zM8 6v2.667M8 10.667v.006"></path>
+        </g>
+        <defs>
+            <clipPath id="clip0_15620_4632">
+                <path fill="#fff" d="M0 0H16V16H0z"></path>
+            </clipPath>
+        </defs>
+    </svg>
+);

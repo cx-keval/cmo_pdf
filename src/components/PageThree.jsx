@@ -1,9 +1,12 @@
+import SectionHeader from "./SectionHeader";
+
 const METRICS = [
     {
         label: "Followers",
         value: 1000,
         precision: 1,
         showCurrency: false,
+        postFix: "",
     },
     {
         label: "Total Post",
@@ -52,15 +55,12 @@ const METRICS = [
 const PageThree = () => {
     return (
         <div className="flex-1 p-6">
-            <div className="mt-2">
-                <p className="text-xl font-medium">Profile Overview</p>
-                <p className="text-slate-400">
-                    Provides a summary of an influencer's profile engagement
-                    metrics.
-                </p>
-            </div>
+            <SectionHeader
+                title="Profile Overview"
+                description="Provides a summary of an influencer's profile engagement metrics."
+            />
 
-            <div className="mt-4 grid grid-cols-2 rounded-lg border p-4">
+            <div className="mt-2 grid grid-cols-2 rounded-lg border p-4">
                 <div className="flex gap-4 border-r pr-4">
                     <img
                         src="https://imgigp.modash.io/v2?mb0KwpL92uYofJiSjDn1%2F6peL1lBwv3s%2BUvShHERlDY6%2BlN4nI8g5ywMDf0jnSXRpjYDM%2FopG6LEn5yybjPwMC7q%2BDaxyT%2F%2FL0IAHSjFLGXYyTdtc97YFhND8dFFRvhmgNlJUwVYqIiahjW32e%2BqWA%3D%3D"
@@ -134,15 +134,13 @@ const PageThree = () => {
                 </div>
             </div>
 
-            <div className="mt-8">
-                <p className="text-xl font-medium">Metrics Overview</p>
-                <p className="text-slate-400">
-                    Provides a summary of an influencer's profile engagement
-                    metrics.
-                </p>
-            </div>
+            <SectionHeader
+                title="Metrics Overview"
+                description="Provides a summary of an influencer's profile engagement metrics."
+                className="mt-8"
+            />
 
-            <div className="mt-4 grid grid-cols-4 gap-4">
+            <div className="mt-2 grid grid-cols-4 gap-4">
                 {METRICS.map(({ label, value, postFix }) => (
                     <div
                         key={label}

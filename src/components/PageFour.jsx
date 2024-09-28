@@ -1,4 +1,5 @@
 import Chart from "react-apexcharts";
+import SectionHeader from "./SectionHeader";
 
 const PageFour = () => {
     const socialScoreOptions = {
@@ -88,13 +89,10 @@ const PageFour = () => {
 
     return (
         <div className="flex-1 p-6">
-            <div>
-                <p className="text-xl font-medium">Social Score</p>
-                <p className="text-slate-400">
-                    The "Social Score" section offers a comprehensive analysis
-                    of overall impact and reach.
-                </p>
-            </div>
+            <SectionHeader
+                title="Social Score"
+                description={`The "Social Score" section offers a comprehensive analysis of overall impact and reach.`}
+            />
 
             <div className="mt-2 grid grid-cols-4 gap-4">
                 <div className="col-span-3 flex rounded-lg border p-4">
@@ -213,17 +211,14 @@ const PageFour = () => {
                 </div>
             </div>
 
-            <div className="mt-4">
-                <p className="text-xl font-medium text-blue-500">
-                    Profile Performance vs Competitors
-                </p>
-                <p className="text-slate-400">
-                    The "Social Score" section offers a comprehensive analysis
-                    of overall impact and reach.
-                </p>
-            </div>
+            <SectionHeader
+                title="Profile Performance vs Competitors"
+                description={`The "Social Score" section offers a comprehensive analysis of overall impact and reach.`}
+                blueTitle
+                className="mt-4"
+            />
 
-            <div className="mt-3 grid grid-cols-5">
+            <div className="mt-2 grid grid-cols-5">
                 <div className="col-span-1">
                     <div className="flex h-11 items-center"> </div>
                     <div className="flex h-11 items-center">

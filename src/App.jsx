@@ -1,8 +1,9 @@
+import PageWrapper from "./components/PageWrapper";
 import PageTwo from "./components/PageTwo";
 import PageThree from "./components/PageThree";
 import PageFour from "./components/PageFour";
 import PageFive from "./components/PageFive";
-import PageWrapper from "./components/PageWrapper";
+import PageSix from "./components/PageSix";
 
 const App = () => {
     return (
@@ -18,6 +19,10 @@ const App = () => {
             </PageWrapper>
 
             <PageFive />
+
+            <PageWrapper>
+                <PageSix />
+            </PageWrapper>
         </div>
     );
 };
