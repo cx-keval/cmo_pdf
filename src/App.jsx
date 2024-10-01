@@ -4,6 +4,7 @@ import PageThree from "./components/PageThree";
 import PageFour from "./components/PageFour";
 import PageFive from "./components/PageFive";
 import PageSix from "./components/PageSix";
+import PageSeven from "./components/PageSeven";
 
 const App = () => {
     return (
@@ -22,6 +23,10 @@ const App = () => {
 
             <PageWrapper>
                 <PageSix />
+            </PageWrapper>
+
+            <PageWrapper>
+                <PageSeven />
             </PageWrapper>
         </div>
     );

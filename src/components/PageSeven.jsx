@@ -4,15 +4,8 @@ import Chart from "react-apexcharts";
 
 const METRICS = [
     {
-        label: "Engagement Rate",
-        value: 2.05,
-        precision: 1,
-        showCurrency: false,
-        postFix: "%",
-    },
-    {
-        label: "Avg. Views",
-        value: 1000,
+        label: "Avg. Likes",
+        value: 248,
         precision: 1,
         showCurrency: false,
         postFix: "",
@@ -25,15 +18,15 @@ const METRICS = [
         postFix: "",
     },
     {
-        label: "Avg. Likes",
-        value: 248,
+        label: "Engagement Rate",
+        value: 2.05,
         precision: 1,
         showCurrency: false,
-        postFix: "",
+        postFix: "%",
     },
 ];
 
-const PageSix = () => {
+const PageSeven = () => {
     const series = [
         {
             name: "Posts",
@@ -125,8 +118,8 @@ const PageSix = () => {
             <div className="flex gap-4">
                 <div className="flex-1">
                     <SectionHeader
-                        title="Reels Overview"
-                        description="This section shows aggregate metrics of the influence’s reels."
+                        title="Feeds Overview"
+                        description="This section shows aggregate metrics of the influence’s feed"
                     />
                     <div className="mt-2 grid grid-cols-2 gap-4">
                         {METRICS.map(({ label, value, postFix }) => (
@@ -146,14 +139,14 @@ const PageSix = () => {
                     <div className="mt-2 flex items-center gap-1 rounded-sm bg-slate-50 px-2 py-1 text-sm text-slate-600">
                         <InfoCircleSVG className="h-4 w-4" />
                         Metrics are calculated based on your most recent 24
-                        reels.
+                        feed.
                     </div>
                 </div>
 
                 <div className="flex-[1.75]">
                     <SectionHeader
-                        title="Reel Posting Frequency"
-                        description="This section shows how often an influencer posts Instagram Reels."
+                        title="Feed Posting Frequency"
+                        description="This section shows how often an influencer posts to their feed"
                     />
                     <div className="mt-2 rounded-md border p-3">
                         <div
@@ -162,19 +155,19 @@ const PageSix = () => {
                         >
                             <div className="flex-1 space-y-1 border-r px-3 last:border-r-0">
                                 <p className="text-xs text-slate-400">
-                                    Avg. Reels/Day
+                                    Avg. Feed/Day
                                 </p>
                                 <p className="text-base font-medium">0.8</p>
                             </div>
                             <div className="flex-1 space-y-1 border-r px-4 last:border-r-0">
                                 <p className="text-xs text-slate-400">
-                                    Avg. Reels/Week
+                                    Avg. Feed/Week
                                 </p>
                                 <p className="text-base font-medium">4.8</p>
                             </div>
                             <div className="flex-1 space-y-1 border-r px-4 last:border-r-0">
                                 <p className="text-xs text-slate-400">
-                                    Avg. Reels/Month
+                                    Avg. Feed/Month
                                 </p>
                                 <p className="text-base font-medium">18</p>
                             </div>
@@ -198,8 +191,8 @@ const PageSix = () => {
 
             <div className="flex-1">
                 <SectionHeader
-                    title="Recent Reels"
-                    description="This section shows latest 4 reels posted by the influencer."
+                    title="Recent Feed"
+                    description="This section shows latest 4 media posted by the influencer."
                 />
 
                 <div className="mt-2 grid grid-cols-4 gap-4">
@@ -234,13 +227,12 @@ const Card = () => {
                         </span>
                     </div>
                     <span className="rounded-full bg-slate-950/50 px-2 font-medium text-white">
-                        Reel
+                        Feed
                     </span>
                 </div>
             </div>
 
             <div className="flex items-center justify-evenly rounded-md bg-slate-100 py-1 text-xs font-medium text-slate-600">
-                <span className="flex items-center gap-1">676.9K</span>
                 <span className="flex items-center gap-1">76.1K</span>
                 <span className="flex items-center gap-1">1679</span>
                 <span className="flex items-center gap-1">
@@ -252,4 +244,4 @@ const Card = () => {
     );
 };
 
-export default PageSix;
+export default PageSeven;
