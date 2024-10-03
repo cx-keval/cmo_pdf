@@ -5,7 +5,7 @@ const PageTwo = () => {
         <SegmentStarterPage
             index={1}
             title="Profile Diagnosis"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exer"
+            description="Get a detailed analysis of your profile’s performance, highlighting key strengths, identifying areas for improvement, and offering actionable insights to enhance your online presence."
             list={[
                 "Profile",
                 "Profile Metrics",

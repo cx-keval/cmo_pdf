@@ -7,6 +7,7 @@ import PageSix from "./components/PageSix";
 import PageSeven from "./components/PageSeven";
 import PageEight from "./components/PageEight";
 import PageNine from "./components/PageNine";
+import PageTen from "./components/PageTen";
 
 const App = () => {
     return (
@@ -38,6 +39,8 @@ const App = () => {
             <PageWrapper>
                 <PageNine />
             </PageWrapper>
+
+            <PageTen />
         </div>
     );
 };

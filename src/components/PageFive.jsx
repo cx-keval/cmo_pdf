@@ -5,7 +5,7 @@ const PageFive = () => {
         <SegmentStarterPage
             index={2}
             title="Engagement Diagnosis"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exer"
+            description="Analyze engagement levels from your posts, uncover trends, and identify opportunities to enhance interactions and build stronger connections with your audience."
             list={[
                 <>
                     <strong>Feed Engagement</strong> (Overview, Posting
