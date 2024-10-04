@@ -1,4 +1,5 @@
 import PageWrapper from "./components/PageWrapper";
+import PageOne from "./components/PageOne";
 import PageTwo from "./components/PageTwo";
 import PageThree from "./components/PageThree";
 import PageFour from "./components/PageFour";
@@ -19,6 +20,8 @@ import ThankYou from "./components/ThankYou";
 const App = () => {
     return (
         <div aria-label="main" className="w-full">
+            <PageOne />
+
             <PageTwo />
 
             <PageWrapper>
