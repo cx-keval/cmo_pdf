@@ -14,6 +14,7 @@ import PageThirteen from "./components/PageThirteen";
 import PageFourteen from "./components/PageFourteen";
 import PageFifteen from "./components/PageFifteen";
 import PageSixteen from "./components/PageSixteen";
+import ThankYou from "./components/ThankYou";
 
 const App = () => {
     return (
@@ -69,6 +70,8 @@ const App = () => {
             <PageWrapper>
                 <PageSixteen />
             </PageWrapper>
+
+            <ThankYou />
         </div>
     );
 };
