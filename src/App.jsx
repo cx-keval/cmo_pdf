@@ -11,6 +11,7 @@ import PageTen from "./components/PageTen";
 import PageEleven from "./components/PageEleven";
 import PageTwelve from "./components/PageTwelve";
 import PageThirteen from "./components/PageThirteen";
+import PageFourteen from "./components/PageFourteen";
 
 const App = () => {
     return (
@@ -54,6 +55,10 @@ const App = () => {
             </PageWrapper>
 
             <PageThirteen />
+
+            <PageWrapper>
+                <PageFourteen />
+            </PageWrapper>
         </div>
     );
 };
