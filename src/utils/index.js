@@ -1,19 +1,29 @@
-const SI_SYMBOL = ["", "k", "M", "G", "T", "P", "E"];
+import millify from "millify";
 
-export const beautify = (number) => {
-    // what tier? (determines SI symbol)
-    let tier = (Math.log10(Math.abs(number)) / 3) | 0;
-
-    // if zero, we don't need a suffix
-    if (tier == 0) return number;
-
-    // get suffix and determine scale
-    let suffix = SI_SYMBOL[tier];
-    let scale = Math.pow(10, tier * 3);
-
-    // scale the number
-    let scaled = number / scale;
-
-    // format number and add suffix
-    return scaled.toFixed(1) + suffix;
+export const beautify = (value, precision = 1) => {
+    // Check if the value is a valid number or can be parsed into one
+    const numericValue = Number(value);
+    if (isNaN(numericValue)) {
+        // If it's not a valid number, return the original value
+        return value;
+    }
+    // Check if the numericValue is within the safe integer range
+    if (
+        numericValue > Number.MAX_SAFE_INTEGER ||
+        numericValue < Number.MIN_SAFE_INTEGER
+    ) {
+        return "NAN";
+    }
+    const formattedValue = millify(numericValue, {
+        precision: precision,
+        // decimalSeparator: ".",
+        // thousandSeparator: ",",
+        // abbreviations: {
+        //     thousand: "K",
+        //     million: "M",
+        //     billion: "B",
+        //     trillion: "T",
+        // },
+    });
+    return formattedValue;
 };

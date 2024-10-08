@@ -367,17 +367,10 @@ const PageEight = () => {
                 title="Growth Rate"
                 description="This section analyzes influencer's followers, like and post engagement over a specified period."
             />
-            <div className="mt-2 rounded-md border p-4">
+            <div className="mt-2 rounded-md border p-4 pb-0">
                 <p className="font-medium text-slate-600">Followers Growth</p>
 
-                <Chart
-                    type="area"
-                    options={options}
-                    series={series}
-                    height={225}
-                />
-
-                <div className="flex items-center justify-between rounded-md border px-4 py-2">
+                <div className="mt-2 flex items-center justify-between rounded-md border px-4 py-2">
                     <p className="text-sm font-medium text-slate-600">
                         Growth by followers
                     </p>
@@ -390,20 +383,20 @@ const PageEight = () => {
                         <span className="text-sm font-semibold">71.86%</span>
                     </div>
                 </div>
+
+                <Chart
+                    type="area"
+                    options={options}
+                    series={series}
+                    height={225}
+                />
             </div>
 
             <div className="mt-2 grid grid-cols-2 gap-4">
-                <div className="rounded-md border p-4">
+                <div className="rounded-md border p-4 pb-0">
                     <p className="font-medium text-slate-600">Likes Growth</p>
 
-                    <Chart
-                        type="area"
-                        options={options}
-                        series={series}
-                        height={225}
-                    />
-
-                    <div className="flex items-center justify-between rounded-md border px-4 py-2">
+                    <div className="mt-2 flex items-center justify-between rounded-md border px-4 py-2">
                         <p className="text-sm font-medium text-slate-600">
                             Growth by likes
                         </p>
@@ -418,6 +411,13 @@ const PageEight = () => {
                             </span>
                         </div>
                     </div>
+
+                    <Chart
+                        type="area"
+                        options={options}
+                        series={series}
+                        height={225}
+                    />
                 </div>
                 <div className="rounded-md border p-4">
                     <p className="font-medium text-slate-600">

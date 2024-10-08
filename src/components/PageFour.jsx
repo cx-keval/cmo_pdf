@@ -1,5 +1,191 @@
 import Chart from "react-apexcharts";
 import SectionHeader from "./SectionHeader";
+import { beautify } from "../utils";
+
+const comparison = {
+    social_score: [
+        {
+            value: 88,
+            precision: 1,
+            postFix: "",
+            highlight: true,
+        },
+        {
+            value: 85,
+            precision: 1,
+            postFix: "",
+            highlight: false,
+        },
+        {
+            value: 53,
+            precision: 1,
+            postFix: "",
+            highlight: false,
+        },
+        {
+            value: 86,
+            precision: 1,
+            postFix: "",
+            highlight: false,
+        },
+    ],
+    followers: [
+        {
+            value: 5_600_000,
+            precision: 1,
+            postFix: "",
+            highlight: false,
+        },
+        {
+            value: 9_300_000,
+            precision: 1,
+            postFix: "",
+            highlight: true,
+        },
+        {
+            value: 2_100_000,
+            precision: 1,
+            postFix: "",
+            highlight: false,
+        },
+        {
+            value: 4_900_000,
+            precision: 1,
+            postFix: "",
+            highlight: false,
+        },
+    ],
+    engagement_rate: [
+        {
+            value: 5.89232,
+            precision: 3,
+            postFix: "%",
+            highlight: false,
+        },
+        {
+            value: 5.16214,
+            precision: 3,
+            postFix: "%",
+            highlight: false,
+        },
+        {
+            value: 9.3234,
+            precision: 3,
+            postFix: "%",
+            highlight: true,
+        },
+        {
+            value: 8.63324,
+            precision: 3,
+            postFix: "%",
+            highlight: false,
+        },
+    ],
+    posting_frequency: [
+        {
+            value: 5,
+            precision: 1,
+            postFix: " Posts",
+            highlight: false,
+        },
+        {
+            value: 5,
+            precision: 1,
+            postFix: " Posts",
+            highlight: false,
+        },
+        {
+            value: 9,
+            precision: 1,
+            postFix: " Posts",
+            highlight: false,
+        },
+        {
+            value: 11,
+            precision: 1,
+            postFix: " Posts",
+            highlight: true,
+        },
+    ],
+    audience_credibility: [
+        {
+            value: 69.3,
+            precision: 1,
+            postFix: "",
+            highlight: false,
+        },
+        {
+            value: 76,
+            precision: 1,
+            postFix: "",
+            highlight: false,
+        },
+        {
+            value: 82.8,
+            precision: 1,
+            postFix: "",
+            highlight: true,
+        },
+        {
+            value: 79.2,
+            precision: 1,
+            postFix: "",
+            highlight: false,
+        },
+    ],
+    growth_rate: [
+        {
+            value: 20,
+            precision: 1,
+            postFix: "",
+            highlight: false,
+        },
+        {
+            value: 50,
+            precision: 1,
+            postFix: "",
+            highlight: true,
+        },
+        {
+            value: 20,
+            precision: 1,
+            postFix: "",
+            highlight: false,
+        },
+        {
+            value: 30,
+            precision: 1,
+            postFix: "",
+            highlight: false,
+        },
+    ],
+    views_to_followers_ratio: [
+        {
+            value: 20,
+            precision: 1,
+            postFix: "",
+            highlight: false,
+        },
+        {
+            value: 20,
+            precision: 1,
+            postFix: "",
+            highlight: false,
+        },
+        {
+            value: 50,
+            precision: 1,
+            postFix: "",
+            highlight: true,
+        },
+        {
+            value: 30,
+            precision: 1,
+            postFix: "",
+            highlight: false,
+        },
+    ],
+};
 
 const PageFour = () => {
     const socialScoreOptions = {
@@ -213,7 +399,7 @@ const PageFour = () => {
 
             <SectionHeader
                 title="Profile Performance vs Competitors"
-                description={`The "Social Score" section offers a comprehensive analysis of overall impact and reach.`}
+                description="This section compare your profile's performance against competitors, highlighting strengths, weaknesses, and opportunities for improvement in key areas."
                 blueTitle
                 className="mt-4"
             />
@@ -245,59 +431,86 @@ const PageFour = () => {
                         </p>
                     </div>
                 </div>
-                <div className="col-span-4 rounded-lg border border-blue-500 text-lg font-medium text-slate-600">
-                    <div className="flex h-11 items-center gap-3 border-b border-slate-100 px-5">
-                        <div className="flex-1">Competitor 1</div>
-                        <div className="flex-1">Competitor 2</div>
-                        <div className="flex-1">Competitor 3</div>
-                        <div className="flex-1">Competitor 4</div>
+                <div className="col-span-4 overflow-hidden rounded-lg border border-blue-500 text-base font-medium text-slate-600">
+                    <div className="flex h-11 items-center gap-3 border-b border-slate-200">
+                        <div className="flex h-full flex-1 items-center gap-1 overflow-hidden bg-blue-50 pl-5">
+                            <img
+                                src="https://imgigp.modash.io/v2?mb0KwpL92uYofJiSjDn1%2F6peL1lBwv3s%2BUvShHERlDY6%2BlN4nI8g5ywMDf0jnSXRpjYDM%2FopG6LEn5yybjPwMC7q%2BDaxyT%2F%2FL0IAHSjFLGXYyTdtc97YFhND8dFFRvhmgNlJUwVYqIiahjW32e%2BqWA%3D%3D"
+                                alt="profile"
+                                className="h-7 w-7 shrink-0 rounded-full"
+                            />
+                            <span className="flex-1 overflow-hidden truncate">
+                                TATA Group
+                            </span>
+                        </div>
+                        <div className="flex flex-1 items-center gap-1 overflow-hidden">
+                            <img
+                                src="https://imgigp.modash.io/v2?mb0KwpL92uYofJiSjDn1%2F6peL1lBwv3s%2BUvShHERlDZV%2BMI1sY1L8JvHJB4dXZLAFe7JaRNchWmK9Xp1W2zb%2F98rjxGcsp93Sv%2FYQdDZTIp8Va3tDVmaiUbg5OHS8Kf2Wwq5%2BhsabX0Nc9aXCBbcsw%3D%3D"
+                                alt="profile"
+                                className="h-7 w-7 shrink-0 rounded-full"
+                            />
+                            <span className="flex-1 overflow-hidden truncate">
+                                Nike
+                            </span>
+                        </div>
+                        <div className="flex flex-1 items-center gap-1 overflow-hidden">
+                            <img
+                                src="https://imgigp.modash.io/v2?mb0KwpL92uYofJiSjDn1%2F6peL1lBwv3s%2BUvShHERlDYvy61sBcp4g%2BGwAUOgcFcWWIL%2FdABgUC9Md6MKlHvB4RWOVcDyDsy1dpt2%2F3JUiOz7cDvaANaSus%2BTa%2B5MpxtqgNlJUwVYqIiahjW32e%2BqWA%3D%3D"
+                                alt="profile"
+                                className="h-7 w-7 shrink-0 rounded-full"
+                            />
+                            <span className="flex-1 overflow-hidden truncate">
+                                Axe
+                            </span>
+                        </div>
+                        <div className="flex flex-1 items-center gap-1 overflow-hidden">
+                            <img
+                                src="https://imgigp.modash.io/v2?mb0KwpL92uYofJiSjDn1%2F6peL1lBwv3s%2BUvShHERlDY6%2BlN4nI8g5ywMDf0jnSXRu5BTUdEqqJAOu%2B3ptfaWy%2BUGnQLWF36aVVwLjITxgmah04bCKYD%2FspeqqSQmguMRWwq5%2BhsabX0Nc9aXCBbcsw%3D%3D"
+                                alt="profile"
+                                className="h-7 w-7 shrink-0 rounded-full"
+                            />
+                            <span className="flex-1 overflow-hidden truncate">
+                                Spotify
+                            </span>
+                        </div>
                     </div>
-                    <div className="flex h-11 items-center gap-3 border-b border-slate-100 px-5">
-                        <div className="flex-1">1</div>
-                        <div className="flex-1">2</div>
-                        <div className="flex-1 text-blue-500">3</div>
-                        <div className="flex-1">4</div>
-                    </div>
-                    <div className="flex h-11 items-center gap-3 border-b border-slate-100 px-5">
-                        <div className="flex-1">1</div>
-                        <div className="flex-1">2</div>
-                        <div className="flex-1">3</div>
-                        <div className="flex-1 text-blue-500">4</div>
-                    </div>
-                    <div className="flex h-11 items-center gap-3 border-b border-slate-100 px-5">
-                        <div className="flex-1 text-blue-500">1</div>
-                        <div className="flex-1">2</div>
-                        <div className="flex-1">3</div>
-                        <div className="flex-1">4</div>
-                    </div>
-                    <div className="flex h-11 items-center gap-3 border-b border-slate-100 px-5">
-                        <div className="flex-1">1</div>
-                        <div className="flex-1">2</div>
-                        <div className="flex-1 text-blue-500">3</div>
-                        <div className="flex-1">4</div>
-                    </div>
-                    <div className="flex h-11 items-center gap-3 border-b border-slate-100 px-5">
-                        <div className="flex-1">1</div>
-                        <div className="flex-1">2</div>
-                        <div className="flex-1">3</div>
-                        <div className="flex-1">4</div>
-                    </div>
-                    <div className="flex h-11 items-center gap-3 border-b border-slate-100 px-5">
-                        <div className="flex-1">1</div>
-                        <div className="flex-1">2</div>
-                        <div className="flex-1">3</div>
-                        <div className="flex-1">4</div>
-                    </div>
-                    <div className="flex h-11 items-center gap-3 px-5">
-                        <div className="flex-1">1</div>
-                        <div className="flex-1">2</div>
-                        <div className="flex-1 text-blue-500">3</div>
-                        <div className="flex-1">4</div>
-                    </div>
+
+                    {Object.entries(comparison).map(([_, values]) => (
+                        <Row>
+                            {values.map(
+                                (
+                                    { highlight, postFix, precision, value },
+                                    idx
+                                ) => (
+                                    <Item
+                                        isFirst={idx === 0}
+                                        textBlue={highlight}
+                                    >
+                                        {beautify(value, precision)}
+                                        {postFix}
+                                    </Item>
+                                )
+                            )}
+                        </Row>
+                    ))}
                 </div>
             </div>
         </div>
     );
 };
+
+const Row = ({ children }) => (
+    <div className="last:bottom-b-0 flex h-11 items-center gap-3 border-b border-slate-200">
+        {children}
+    </div>
+);
+
+const Item = ({ children, isFirst = false, textBlue = false }) => (
+    <div
+        className={`flex h-full flex-1 items-center ${isFirst ? "bg-blue-50 pl-5" : ""} ${textBlue ? "text-blue-500" : ""}`}
+    >
+        {children}
+    </div>
+);
 
 export default PageFour;

@@ -1,4 +1,5 @@
 import SectionHeader from "./SectionHeader";
+import { InfoCircleSVG } from "./SVGs";
 
 const METRICS = [
     {
@@ -117,7 +118,7 @@ const PageThree = () => {
 
                 <div className="flex flex-col justify-center pl-4">
                     <p className="text-lg font-medium text-slate-600">
-                        Profile Caption:
+                        Description:
                     </p>
                     <p className="line-clamp-5 text-slate-400">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -153,6 +154,12 @@ const PageThree = () => {
                         </p>
                     </div>
                 ))}
+            </div>
+
+            <div className="mt-4 flex items-center gap-1 rounded-sm bg-slate-50 px-2 py-1 text-sm text-slate-600">
+                <InfoCircleSVG className="h-4 w-4" /> Engagement rate, average
+                views, comments, and likes are calculated from the influencer's
+                recent posts over the past 6 to 12 months.
             </div>
         </div>
     );

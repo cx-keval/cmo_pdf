@@ -1,5 +1,139 @@
+import { beautify } from "../utils";
 import SectionHeader from "./SectionHeader";
 import Chart from "react-apexcharts";
+
+const comparison = {
+    audience_credibility: [
+        {
+            value: 88,
+            precision: 1,
+            postFix: "",
+            highlight: false,
+        },
+        {
+            value: 85,
+            precision: 1,
+            postFix: "",
+            highlight: false,
+        },
+        {
+            value: 53,
+            precision: 1,
+            postFix: "",
+            highlight: false,
+        },
+        {
+            value: 86,
+            precision: 1,
+            postFix: "",
+            highlight: false,
+        },
+    ],
+    top_age_group: [
+        {
+            value: "13-17",
+            precision: 1,
+            postFix: "",
+            highlight: false,
+        },
+        {
+            value: "18-24",
+            precision: 1,
+            postFix: "",
+            highlight: false,
+        },
+        {
+            value: "13-17",
+            precision: 1,
+            postFix: "",
+            highlight: false,
+        },
+        {
+            value: "44+",
+            precision: 1,
+            postFix: "",
+            highlight: false,
+        },
+    ],
+    top_country: [
+        {
+            value: "India",
+            precision: 1,
+            postFix: "",
+            highlight: false,
+        },
+        {
+            value: "England",
+            precision: 1,
+            postFix: "",
+            highlight: false,
+        },
+        {
+            value: "United States",
+            precision: 1,
+            postFix: "",
+            highlight: false,
+        },
+        {
+            value: "UAE",
+            precision: 1,
+            postFix: "",
+            highlight: false,
+        },
+    ],
+    top_city: [
+        {
+            value: "Mumbai",
+            precision: 1,
+            postFix: "",
+            highlight: false,
+        },
+        {
+            value: "London",
+            precision: 1,
+            postFix: "",
+            highlight: false,
+        },
+        {
+            value: "New York",
+            precision: 1,
+            postFix: "",
+            highlight: false,
+        },
+        {
+            value: "Dubai",
+            precision: 1,
+            postFix: "",
+            highlight: false,
+        },
+    ],
+    top_gender: [
+        {
+            value: "Male",
+            precision: 1,
+            postFix: "",
+            highlight: false,
+        },
+        {
+            value: "Female",
+            precision: 1,
+            postFix: "",
+            highlight: false,
+        },
+        {
+            value: "Female",
+            precision: 1,
+            postFix: "",
+            highlight: false,
+        },
+        {
+            value: "Male",
+            precision: 1,
+            postFix: "",
+            highlight: false,
+        },
+    ],
+};
 
 const PageTwelve = () => {
     const genderSplitSeries = [75.21, Number((100 - 75.21).toFixed(2))];
@@ -270,47 +404,89 @@ const PageTwelve = () => {
                         <p className="text-slate-400">Top Gender</p>
                     </div>
                 </div>
-                <div className="col-span-4 rounded-lg border border-blue-500 font-medium text-slate-600">
-                    <div className="flex h-11 items-center gap-3 border-b border-slate-100 px-5">
-                        <div className="flex-1">Competitor 1</div>
-                        <div className="flex-1">Competitor 2</div>
-                        <div className="flex-1">Competitor 3</div>
-                        <div className="flex-1">Competitor 4</div>
+
+                <div className="col-span-4 overflow-hidden rounded-lg border border-blue-500 text-base font-medium text-slate-600">
+                    <div className="flex h-11 items-center gap-3 border-b border-slate-200">
+                        <div className="flex h-full flex-1 items-center gap-1 overflow-hidden bg-blue-50 pl-5">
+                            <img
+                                src="https://imgigp.modash.io/v2?mb0KwpL92uYofJiSjDn1%2F6peL1lBwv3s%2BUvShHERlDY6%2BlN4nI8g5ywMDf0jnSXRpjYDM%2FopG6LEn5yybjPwMC7q%2BDaxyT%2F%2FL0IAHSjFLGXYyTdtc97YFhND8dFFRvhmgNlJUwVYqIiahjW32e%2BqWA%3D%3D"
+                                alt="profile"
+                                className="h-7 w-7 shrink-0 rounded-full"
+                            />
+                            <span className="flex-1 overflow-hidden truncate">
+                                TATA Group
+                            </span>
+                        </div>
+                        <div className="flex flex-1 items-center gap-1 overflow-hidden">
+                            <img
+                                src="https://imgigp.modash.io/v2?mb0KwpL92uYofJiSjDn1%2F6peL1lBwv3s%2BUvShHERlDZV%2BMI1sY1L8JvHJB4dXZLAFe7JaRNchWmK9Xp1W2zb%2F98rjxGcsp93Sv%2FYQdDZTIp8Va3tDVmaiUbg5OHS8Kf2Wwq5%2BhsabX0Nc9aXCBbcsw%3D%3D"
+                                alt="profile"
+                                className="h-7 w-7 shrink-0 rounded-full"
+                            />
+                            <span className="flex-1 overflow-hidden truncate">
+                                Nike
+                            </span>
+                        </div>
+                        <div className="flex flex-1 items-center gap-1 overflow-hidden">
+                            <img
+                                src="https://imgigp.modash.io/v2?mb0KwpL92uYofJiSjDn1%2F6peL1lBwv3s%2BUvShHERlDYvy61sBcp4g%2BGwAUOgcFcWWIL%2FdABgUC9Md6MKlHvB4RWOVcDyDsy1dpt2%2F3JUiOz7cDvaANaSus%2BTa%2B5MpxtqgNlJUwVYqIiahjW32e%2BqWA%3D%3D"
+                                alt="profile"
+                                className="h-7 w-7 shrink-0 rounded-full"
+                            />
+                            <span className="flex-1 overflow-hidden truncate">
+                                Axe
+                            </span>
+                        </div>
+                        <div className="flex flex-1 items-center gap-1 overflow-hidden">
+                            <img
+                                src="https://imgigp.modash.io/v2?mb0KwpL92uYofJiSjDn1%2F6peL1lBwv3s%2BUvShHERlDY6%2BlN4nI8g5ywMDf0jnSXRu5BTUdEqqJAOu%2B3ptfaWy%2BUGnQLWF36aVVwLjITxgmah04bCKYD%2FspeqqSQmguMRWwq5%2BhsabX0Nc9aXCBbcsw%3D%3D"
+                                alt="profile"
+                                className="h-7 w-7 shrink-0 rounded-full"
+                            />
+                            <span className="flex-1 overflow-hidden truncate">
+                                Spotify
+                            </span>
+                        </div>
                     </div>
-                    <div className="flex h-11 items-center gap-3 border-b border-slate-100 px-5">
-                        <div className="flex-1">20</div>
-                        <div className="flex-1">20</div>
-                        <div className="flex-1 text-blue-500">50</div>
-                        <div className="flex-1">30</div>
-                    </div>
-                    <div className="flex h-11 items-center gap-3 border-b border-slate-100 px-5">
-                        <div className="flex-1">13-17</div>
-                        <div className="flex-1">18-24</div>
-                        <div className="flex-1">13-17</div>
-                        <div className="flex-1 text-blue-500">44+</div>
-                    </div>
-                    <div className="flex h-11 items-center gap-3 border-b border-slate-100 px-5">
-                        <div className="flex-1 text-blue-500">India</div>
-                        <div className="flex-1">India</div>
-                        <div className="flex-1">India</div>
-                        <div className="flex-1">India</div>
-                    </div>
-                    <div className="flex h-11 items-center gap-3 border-b border-slate-100 px-5">
-                        <div className="flex-1">Ahmedabad</div>
-                        <div className="flex-1">Surat</div>
-                        <div className="flex-1 text-blue-500">Mumbai</div>
-                        <div className="flex-1">Bangalore</div>
-                    </div>
-                    <div className="flex h-11 items-center gap-3 px-5">
-                        <div className="flex-1">Male</div>
-                        <div className="flex-1">Female</div>
-                        <div className="flex-1 text-blue-500">Female</div>
-                        <div className="flex-1">Male</div>
-                    </div>
+
+                    {Object.entries(comparison).map(([_, values]) => (
+                        <Row>
+                            {values.map(
+                                (
+                                    { highlight, postFix, precision, value },
+                                    idx
+                                ) => (
+                                    <Item
+                                        isFirst={idx === 0}
+                                        textBlue={highlight}
+                                    >
+                                        {typeof value === "number"
+                                            ? beautify(value, precision)
+                                            : value}
+                                        {postFix}
+                                    </Item>
+                                )
+                            )}
+                        </Row>
+                    ))}
                 </div>
             </div>
         </div>
     );
 };
+
+const Row = ({ children }) => (
+    <div className="last:bottom-b-0 flex h-11 items-center gap-3 border-b border-slate-200">
+        {children}
+    </div>
+);
+
+const Item = ({ children, isFirst = false, textBlue = false }) => (
+    <div
+        className={`flex h-full flex-1 items-center ${isFirst ? "bg-blue-50 pl-5" : ""} ${textBlue ? "text-blue-500" : ""}`}
+    >
+        {children}
+    </div>
+);
 
 export default PageTwelve;
