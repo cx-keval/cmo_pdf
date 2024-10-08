@@ -1,6 +1,6 @@
+import { IconInfoCircle } from "@tabler/icons-react";
 import SectionHeader from "./SectionHeader";
 import Chart from "react-apexcharts";
-import { InfoCircleSVG } from "./SVGs";
 
 const PageNine = () => {
     const sentimentAnalysisSeries = [20, 20, 60];
@@ -91,7 +91,7 @@ const PageNine = () => {
                     <hr className="mb-4 mt-4" />
 
                     <div className="flex gap-1 text-sm text-slate-600">
-                        <InfoCircleSVG className="mt-1 h-4 w-4 shrink-0" />
+                        <IconInfoCircle className="mt-1 h-4 w-4 shrink-0" />
                         <span>
                             These insights have been derived from the top 20
                             comments on the last 10 posts.
@@ -106,7 +106,7 @@ const PageNine = () => {
                 />
 
                 <div className="flex items-center gap-1 rounded-md bg-orange-50 px-2 py-1 text-sm text-orange-500">
-                    <InfoCircleSVGOrange className="h-4 w-4" />
+                    <IconInfoCircle className="h-4 w-4" />
                     AI is in its early stages and doesn't yet understand sarcasm
                     or unusual language.
                 </div>
@@ -162,35 +162,5 @@ const CommentCard = () => {
         </div>
     );
 };
-
-const InfoCircleSVGOrange = ({ className = "" }) => (
-    <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="20"
-        height="21"
-        fill="none"
-        viewBox="0 0 20 21"
-        className={className}
-    >
-        <g
-            stroke="#F97316"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            clipPath="url(#clip0_15507_11546)"
-        >
-            <path d="M2.5 10.5a7.5 7.5 0 1015 0 7.5 7.5 0 00-15 0zM10 8v3.333M10 13.834v.008"></path>
-        </g>
-        <defs>
-            <clipPath id="clip0_15507_11546">
-                <path
-                    fill="#fff"
-                    d="M0 0H20V20H0z"
-                    transform="translate(0 .5)"
-                ></path>
-            </clipPath>
-        </defs>
-    </svg>
-);
 
 export default PageNine;

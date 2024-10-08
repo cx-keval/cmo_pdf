@@ -1,5 +1,10 @@
+import {
+    IconEye,
+    IconHeart,
+    IconBrandLine,
+    IconInfoCircle,
+} from "@tabler/icons-react";
 import SectionHeader from "./SectionHeader";
-import { InfoCircleSVG } from "./SVGs";
 import Chart from "react-apexcharts";
 
 const METRICS = [
@@ -144,7 +149,7 @@ const PageSix = () => {
                     </div>
 
                     <div className="mt-2 flex items-center gap-1 rounded-sm bg-slate-50 px-2 py-1 text-sm text-slate-600">
-                        <InfoCircleSVG className="h-4 w-4" />
+                        <IconInfoCircle className="h-4 w-4" />
                         Metrics are calculated based on your most recent 24
                         reels.
                     </div>
@@ -240,10 +245,19 @@ const Card = () => {
             </div>
 
             <div className="flex items-center justify-evenly rounded-md bg-slate-100 py-1 text-xs font-medium text-slate-600">
-                <span className="flex items-center gap-1">676.9K</span>
-                <span className="flex items-center gap-1">76.1K</span>
-                <span className="flex items-center gap-1">1679</span>
-                <span className="flex items-center gap-1">
+                <span className="flex items-center gap-0.5">
+                    <IconEye className="h-4 w-4" />
+                    676.9K
+                </span>
+                <span className="flex items-center gap-0.5">
+                    <IconHeart className="h-4 w-4" />
+                    76.1K
+                </span>
+                <span className="flex items-center gap-0.5">
+                    <IconBrandLine className="h-4 w-4" />
+                    1679
+                </span>
+                <span className="flex items-center gap-0.5">
                     <span>E.R.</span>
                     6.86%
                 </span>

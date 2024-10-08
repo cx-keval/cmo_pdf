@@ -1,3 +1,4 @@
+import { IconEye, IconHeart, IconBrandLine } from "@tabler/icons-react";
 import SectionHeader from "./SectionHeader";
 
 const PageFourteen = () => {
@@ -237,9 +238,19 @@ const Card = () => {
             </div>
 
             <div className="flex items-center justify-evenly rounded-md bg-slate-100 py-1 text-xs font-medium text-slate-600">
-                <span className="flex items-center gap-1">76.1K</span>
-                <span className="flex items-center gap-1">1679</span>
-                <span className="flex items-center gap-1">
+                <span className="flex items-center gap-0.5">
+                    <IconEye className="h-4 w-4" />
+                    676.9K
+                </span>
+                <span className="flex items-center gap-0.5">
+                    <IconHeart className="h-4 w-4" />
+                    76.1K
+                </span>
+                <span className="flex items-center gap-0.5">
+                    <IconBrandLine className="h-4 w-4" />
+                    1679
+                </span>
+                <span className="flex items-center gap-0.5">
                     <span>E.R.</span>
                     6.86%
                 </span>
